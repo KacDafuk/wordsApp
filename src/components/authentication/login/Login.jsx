@@ -8,6 +8,7 @@ const Login = () => {
   const [error, setError] = useState("");
   const { login } = useAuth();
   const navigate = useNavigate();
+  alert("git test new");
   const handleLogin = async (e) => {
     //add check whether nickname already exists
     e.preventDefault();
