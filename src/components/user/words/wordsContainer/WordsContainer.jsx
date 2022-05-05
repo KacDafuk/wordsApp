@@ -6,6 +6,7 @@ const WordsContainer = () => {
   const [showSpinner, setShowSpinner] = useState(true);
   const [error, setError] = useState(false);
   const { deleteWord, words, loading } = useWords();
+  console.log(words, "WORDS");
   useEffect(() => {
     if (!loading) {
       //prevents showing loading spinner when deleting words

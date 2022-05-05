@@ -106,8 +106,8 @@ const WhackWord = () => {
   useEffect(() => {
     const removeIntervalsAndListeners = () => {
       window.removeEventListener("keydown", handleKeyDown);
-      clear(newGameIntervalRef.current);
-      clear(timerIntervalRef.current);
+      clearInterval(newGameIntervalRef.current);
+      clearInterval(timerIntervalRef.current);
     };
     if (!loading) {
       dispatch({ type: "newGame" });

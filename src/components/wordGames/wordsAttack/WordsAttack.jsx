@@ -68,7 +68,6 @@ const EarthDefense = () => {
   function animate() {
     if (lives[lives.length - 1] == false) return;
     const ctx = canvRef.current.getContext("2d");
-    console.log(lives);
     const generateNewEnemies = () => {
       ENEMIES_ARRAY.push(new Enemy(canvRef.current));
     };

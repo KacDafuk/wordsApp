@@ -68,6 +68,7 @@ const ContextWords = ({ children }) => {
     console.log(inputValues);
     for (let word of inputValues) {
       if (!word) continue;
+      console.log(word, "TEST WORD");
       const lowerCaseWord = word.toLowerCase();
       if (Object.keys(dictEngToPol).includes(lowerCaseWord))
         polEngWordPairs.push(`${lowerCaseWord} ${translate(lowerCaseWord)}`);
