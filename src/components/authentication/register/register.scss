@@ -1,0 +1,3 @@
+@use "../authenticationMixins.scss" as *;
+
+@include auth-form;

@@ -1,0 +1,4 @@
+@use "../../general/mixins.scss" as *;
+canvas {
+  @include absCenter;
+}

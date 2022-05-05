@@ -1,0 +1,53 @@
+@use "../../../general/mixins.scss" as *;
+@use "../../../general/variables.scss" as *;
+.quiz-container {
+  @include absCenter;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: min(80%, 600px);
+  row-gap: 4rem;
+  text-align: center;
+  &__question {
+    border-bottom: 3px black solid;
+    font-size: min(20vw, 5rem);
+    width: 100%;
+    text-align: center;
+  }
+  &__answers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    width: 100%;
+
+    &__answer {
+      font-size: 3rem;
+      border: 3px black solid;
+      background-color: rgba($secondary, 0.8);
+      border-radius: 10px;
+      transition: 0.3s all;
+      padding: 0.4rem 0.8rem;
+    }
+    &__answer:hover {
+      border-radius: 15px;
+      background-color: rgba($secondary, 0.6);
+      color: white;
+    }
+    &__answer--correct {
+      background-color: greenyellow !important;
+    }
+    &__answer--wrong {
+      background-color: rgb(239, 87, 87) !important;
+    }
+    @media all and (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.loading {
+  @include absCenter;
+  font-size: 2rem;
+  font-weight: bold;
+}

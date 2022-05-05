@@ -1,0 +1,85 @@
+@use "../../general/mixins.scss" as *;
+@use "../../general/variables.scss" as *;
+@mixin auth-form {
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include absCenter;
+    row-gap: 0.9rem;
+    border: 2px $primary solid;
+    box-shadow: 10px gray;
+    padding: 5rem 3rem;
+    width: min(300px, 40%);
+    height: 350px;
+    outline: 9px $secondary solid;
+    outline-offset: -10.8px;
+    background: linear-gradient(45deg, rgba($secondary, 0.1), white 20%);
+
+    label {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.2rem;
+      width: 100%;
+      font-weight: bold;
+      font-size: 1.5rem;
+
+      input {
+        padding: 0.4rem 0.1rem;
+        transition: all 0.4s;
+        border-bottom: 1px rgba($primary, 0.5) solid;
+        background-color: rgba($secondary, 0.05);
+      }
+
+      input:focus {
+        @include shadow;
+        background-color: rgba($secondary, 0.2);
+        border-bottom: 1px $primary solid;
+      }
+
+      input:focus ~ span {
+        color: red;
+      }
+    }
+
+    &__submit {
+      font-size: 2rem;
+      padding: 0.2rem 0.7rem;
+      width: 100%;
+      margin-top: 1rem;
+      background-color: rgba($secondary, 0.9);
+      color: $white;
+      border-radius: 3px;
+      transition: 0.3s all;
+    }
+
+    &__submit:hover {
+      border-radius: 12px;
+      background-color: rgba($secondary, 1);
+      transform: scale(1.05);
+    }
+  }
+
+  .auth-form::after {
+    content: "";
+    @include absCenter;
+    display: flex;
+    width: 30%;
+    height: 130%;
+    z-index: -1;
+    animation: createMovingBorder 12.3s linear infinite;
+    background-color: white;
+    transform-origin: top left;
+  }
+
+  @keyframes createMovingBorder {
+    from {
+      transform: rotate(0deg) translate(-50%, -50%);
+    }
+
+    to {
+      transform: rotate(360deg) translate(-50%, -50%);
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@use "../general/mixins.scss" as *;
+@use "../general/variables.scss" as *;
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(gray, 0.4);
+  display: grid;
+  place-items: center;
+  &__inner {
+    position: relative;
+    width: min(700px, 90vw);
+    height: 80vh;
+    background-color: $white;
+    font-weight: bold;
+    box-sizing: border-box;
+    &__btn {
+      font-size: 2rem;
+      background-color: $secondary;
+      padding: 0.3rem 1rem;
+      @include absCenter;
+      border-radius: 5px;
+      border: 1px black solid;
+      transition: 0.3s all;
+      &--scanner-upload {
+        cursor: pointer;
+      }
+      &--close {
+        top: 0;
+      }
+      &--add {
+        top: 100%;
+      }
+      &--end-game {
+        transform: translate(-50%, 120%);
+        text-decoration: none;
+      }
+      &--end-game a {
+        text-decoration: none;
+      }
+      &--end-game:hover a {
+        color: white;
+      }
+    }
+    &__btn:hover {
+      background-color: green;
+      color: $white;
+      border-radius: 0.5rem;
+    }
+    &__scanner-message {
+      @include absCenter;
+      top: 70%;
+      &--error {
+        color: red;
+      }
+      &--sucess {
+        color: greenyellow;
+      }
+    }
+  }
+}

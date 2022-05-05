@@ -1,0 +1,52 @@
+@use "../../../../general/variables.scss" as *;
+@use "../../../../general/mixins.scss" as *;
+.add-words-container {
+  display: flex;
+  column-gap: 2rem;
+  text-align: center;
+  cursor: pointer;
+  &__option {
+    border: rgba(black, 0.4) 3px solid;
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    p {
+      margin-top: 0.3rem;
+    }
+    transition: all 0.4s;
+  }
+  &__option:hover {
+    border: black 3px solid;
+    i {
+      border-radius: 5px;
+      color: $secondary;
+    }
+    p {
+      color: $secondary;
+    }
+    animation: pulsate 1s alternate infinite;
+    border-radius: 15px;
+  }
+}
+
+input[type="text"] + div,
+input[type="text"] {
+  transition: all 0.35s;
+}
+input[type="text"]:focus {
+  background-color: rgba($secondary, 0.2);
+}
+input[type="text"]:focus + div {
+  color: rgba($secondary, 1);
+}
+@keyframes pulsate {
+  from {
+    -webkit-box-shadow: 0px 0px 20px 4px rgba($secondary, 0.6);
+    -moz-box-shadow: 0px 0px 20px 4px rgba($secondary, 0.6);
+    box-shadow: 0px 0px 20px 4px rgba($secondary, 0.6);
+  }
+  to {
+    -webkit-box-shadow: 0px 0px 20px 4px $secondary;
+    -moz-box-shadow: 0px 0px 20px 4px $secondary;
+    box-shadow: 0px 0px 20px 4px $secondary;
+  }
+}

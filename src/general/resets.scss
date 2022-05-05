@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+input {
+  border: none;
+}
+input:focus {
+  outline: none;
+}
+body {
+  overflow-x: hidden;
+}

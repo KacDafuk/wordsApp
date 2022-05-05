@@ -1,0 +1,10 @@
+.words {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2rem;
+  h1 {
+    margin-top: 0.4rem;
+  }
+}

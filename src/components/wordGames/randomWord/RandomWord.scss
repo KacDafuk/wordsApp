@@ -1,0 +1,50 @@
+@use "../../../general/variables.scss" as *;
+.game-container {
+  height: 50%;
+  width: min(400px, 100%);
+  margin: 3rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &__random-word {
+    font-size: 6rem;
+  }
+  &__answer {
+    width: 100%;
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 2rem;
+  }
+  &__winning-message {
+    color: green;
+    font-size: 2rem;
+    font-weight: bold;
+    position: absolute;
+    top: 10rem;
+  }
+  &__answer::placeholder {
+    color: rgba(black, 0.07);
+  }
+  &__answer:focus {
+    background-color: white !important;
+  }
+  &__btn {
+    width: 100%;
+    background-color: rgba($secondary, 1);
+    border: 3px black solid;
+    transition: all 0.3s;
+    border-radius: 5px;
+    font-size: 2rem;
+    padding: 0.3rem 0.6rem;
+  }
+  &__btn:hover {
+    background-color: rgba($secondary, 0.7);
+    border-radius: 10px;
+    transform: scale(1.05);
+    color: white;
+    border-color: rgba(black, 0.2);
+  }
+}

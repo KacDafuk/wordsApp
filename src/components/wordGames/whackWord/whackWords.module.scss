@@ -1,0 +1,63 @@
+@use "../../../general/mixins.scss" as *;
+.molesContainer {
+  width: 70%;
+  height: 70vh;
+  margin: 4rem auto 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  background: linear-gradient(
+    to right,
+    rgb(0, 251, 255),
+    white,
+    rgb(10, 218, 255)
+  );
+  border-radius: 20px;
+  padding: 3rem;
+  -webkit-box-shadow: 0px 0px 24px 0px rgb(165, 0, 129);
+  -moz-box-shadow: 0px 0px 24px 0px rgb(165, 0, 129);
+  box-shadow: 0px 0px 24px 0px rgb(165, 0, 129);
+  border: 2px black dashed;
+  @media all and (max-width: 1000px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.gameInfo {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+  .score,
+  .timer {
+    font-size: 3rem;
+
+    @media all and (max-width: 700px) {
+      font-size: 1.5rem;
+    }
+  }
+}
+.endGameModal {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(gray, 0.4);
+  z-index: 999;
+}
+.endGameModalActive {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(gray, 0.4);
+  display: grid;
+  place-items: center;
+  .endGameModalInner {
+    background-color: white;
+    height: 400px;
+    width: 300px;
+  }
+}

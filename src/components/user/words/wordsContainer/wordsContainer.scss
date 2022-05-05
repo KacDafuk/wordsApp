@@ -1,0 +1,32 @@
+@use "../../../../general/variables.scss" as *;
+.words-container {
+  width: 80vw;
+  height: 80vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+  grid-template-rows: repeat(auto-fit, 30px);
+  gap: 1.8rem;
+
+  background-color: rgba($secondary, 0.1);
+  padding: 2rem 2rem;
+  &__word {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px black solid;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0.8rem;
+    border-radius: 10px;
+    background-color: rgba($secondary, 0.4);
+    i:hover {
+      color: red;
+      cursor: pointer;
+      transform: scale(1.05);
+    }
+    i {
+      transition: all 0.2s;
+    }
+  }
+}

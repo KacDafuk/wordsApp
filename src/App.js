@@ -1,24 +1,57 @@
-import logo from './logo.svg';
-import './App.css';
-
+//ADD ROUTES HERE
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  HashRouter,
+} from "react-router-dom";
+import Register from "./components/authentication/register/Register";
+import { useAuth } from "./context/ContextAuth";
+import "./general/resets.scss";
+import Login from "./components/authentication/login/Login";
+import Reset from "./components/authentication/reset/Reset";
+import Words from "./components/user/words/Words";
+import RandomWord from "./components/wordGames/randomWord/RandomWord";
+import "./general/classes.scss";
+import Quiz from "./components/wordGames/quiz/Quiz";
+import WordsAttack from "./components/wordGames/wordsAttack/WordsAttack";
+import Navbar from "./components/nav/Navbar";
+import WhackWord from "./components/wordGames/whackWord/WhackWord";
 function App() {
+  const { user } = useAuth();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {user ? <Navbar /> : ""}
+
+      <Routes>
+        {user ? (
+          <>
+            {/* #####################
+                           USER ROUTES
+                     ##################### */}
+
+            <Route path="/words" element={<Words />} />
+            {/* #####################
+                        USER ROUTES GAMES
+                     ##################### */}
+            <Route path="/randomword" element={<RandomWord />} />
+            <Route path="/quiz" element={<Quiz />} />
+            <Route path="/wordsattack" element={<WordsAttack />} />
+            <Route path="/whackword" element={<WhackWord />} />
+          </>
+        ) : (
+          <>
+            {/* #####################
+                         AUTH ROUTES
+                   ##################### */}
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/" element={<Login />} />
+            <Route path="/reset" element={<Reset />} />
+          </>
+        )}
+      </Routes>
+    </>
   );
 }
 
