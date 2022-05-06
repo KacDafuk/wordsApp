@@ -79,7 +79,6 @@ const ContextWords = ({ children }) => {
   }
   function translate(word) {
     word.trim();
-
     if (word === "") return;
     if (!dictEngToPol[word] && !dictPolToEng[word]) {
       return "translation not found";
