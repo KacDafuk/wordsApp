@@ -8,7 +8,7 @@
 ## Functionality
   ### Adding new Words
   #### Writing and microphone
-   By visiting the typing/microphone button which can be found in page words you can input words you wanna to your collection. It doesn't matter whether you write/say   them in english or polish since the translation works both ways. If the word isn't found in site dictionary it won't be added to your collection.
+   By visiting the typing/microphone button which can be found in page words you can add new words to your collection. It doesn't matter whether you write/say   them in english or polish since the translation works both ways. If the word isn't found in site dictionary it won't be added to your collection.
   #### Scan
   Another way to add words would be adding a document from which you wanna use your words by using SCAN button in words page.The algorithm will found all the words
   try to find what scanned words can be found in the site dictionary and add them to the word library if they are found.For example trying adding the following image   with scan option.
