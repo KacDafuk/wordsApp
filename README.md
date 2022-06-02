@@ -25,9 +25,9 @@
   #### Whack a word
    Inspired by whack a mole. A random word appers every 7 seconds in each of the holes and it's up to player to translate it. The game lasts 60 seconds. (Not playable    for mobile devices).
 ## Technologies used
-  *React
-  *Javascript
-  *Scss
+  * React
+  * Javascript
+  * Scss
 
 
 
