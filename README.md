@@ -3,6 +3,7 @@
 * [General info](#general-info)
 * [Functionality](#functionality)
 * [Technologies used](#technologies-used)
+* [Live site](#live-site)
 ## General Info 
   The app main purpose is to enable you to easily learn english words by adding them to your own word library and playing interactive games with them. As for now a translation for over 3000 words is supported and if in any case you would be interested in adding more please contact me via gh.
 ## Functionality
@@ -28,6 +29,12 @@
   * React
   * Javascript
   * Scss
+## Live site
+  https://learnwords-d7813.web.app/ <br/>
+  login bbb@bbb.com <br/>
+  password bbbaaa 
+  
+    
 
 
 
