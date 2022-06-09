@@ -19,9 +19,9 @@
    Gets random word from ones you created and challenges you with writing a translation of it.The translation asked of you can be either in english or polish depending
    on game game mode you are in.
   #### Quiz
-   Similar as before but you are given four options to choose from and there is no option to switch game mode.
+   Similar to Wylosuj słowo but you are given four options to choose from and there is no option to switch game mode.
   #### Atak słów
-   Words written in polish appear at the top of the screen and it's player's job to write correct translation of them. If at leastt three of the words pase the bottom
+   Words written in polish appear at the top of the screen and it's player's job to write correct translation of them. If at least three of the words pass the bottom
    screen the game ends and you have to start over. (Not playable for mobile devices).
   #### Whack a word
    Inspired by whack a mole. A random word appers every 7 seconds in each of the holes and it's up to player to translate it. The game lasts 60 seconds. (Not playable    for mobile devices).
