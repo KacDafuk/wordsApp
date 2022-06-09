@@ -12,7 +12,7 @@
    By visiting the typing/microphone button which can be found in page words you can add new words to your collection. It doesn't matter whether you write/say   them in english or polish since the translation works both ways. If the word isn't found in site dictionary it won't be added to your collection.
   #### Scan
   Another way to add words would be adding a document from which you wanna use your words by using SCAN button in words page.The algorithm will found all the words
-  that are  in the site dictionary and add them to the word library if they .For example try adding the following image   with scan option.
+  that are  in the site dictionary and add them to the word library .For example try adding the following image   with scan option.
   ![Algorithm schema](https://cms.qz.com/wp-content/uploads/2017/08/image-uploaded-from-ios.jpg?quality=75&strip=all&w=1600&h=900&crop=1) 
 ### GAMES
   #### Wylosuj słowo
